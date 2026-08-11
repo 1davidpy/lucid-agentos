@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Luxi Agent OS — 面向具身智能体的通用运行时，让机器人能够观察、理解、规划、行动与验证。" />
+    <meta name="theme-color" content="#f3f2ed" />
+    <title>Luxi Agent OS · 陆兮具身智能体操作系统</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="demo.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Luxi Agent OS 首页">
+        <img class="official-logo" src="assets/luxitech-official-logo.png" alt="陆兮科技 LuxiTech" />
+      </a>
+      <nav class="desktop-nav" aria-label="主导航">
+        <a href="#overview">概览</a>
+        <a href="#capabilities">能力</a>
+        <a href="#demos">演示</a>
+        <a href="#architecture">架构</a>
+        <a href="http://192.168.2.189:8787/" target="_blank" rel="noreferrer">操作台 ↗</a>
+      </nav>
+      <div class="header-actions">
+        <button class="menu-button" type="button" aria-label="展开导航" aria-expanded="false"><i></i><i></i></button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-copy reveal">
+          <div class="kicker"><span></span> LUXI TECHNOLOGY · 2026</div>
+          <h1>让智能体<br /><em>进入真实世界</em></h1>
+          <p>面向具身机器人的通用 Agent OS。连接多模态感知、长程推理、空间记忆、技能执行与安全验证，让不同机器人共享同一个认知运行时。</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#demos"><span>观看系统演示</span><b>↘</b></a>
+            <a class="button console-button" href="http://192.168.2.189:8787/" target="_blank" rel="noreferrer"><span>进入交互操作台</span><b>↗</b></a>
+          </div>
+          <div class="hero-meta">
+            <div><strong>01</strong><span>ROBOT-NEUTRAL<br />机器人无关架构</span></div>
+            <div><strong>02</strong><span>EDGE + CLOUD<br />端云协同推理</span></div>
+            <div><strong>03</strong><span>VERIFIED<br />全流程可验证</span></div>
+          </div>
+        </div>
+
+        <div class="scroll-cue"><span>SCROLL TO EXPLORE</span><i></i></div>
+      </section>
+
+      <section class="manifesto" id="overview">
+        <div class="section-index reveal"><span>00</span><b>OVERVIEW</b></div>
+        <div class="manifesto-copy reveal">
+          <p>从“能看懂”到“能完成”</p>
+          <h2>机器人不只需要一个模型，<br />更需要一套<strong>可靠的认知系统。</strong></h2>
+        </div>
+        <div class="manifesto-note reveal">
+          <p>Luxi Agent OS 基于 dimOS 进行面向产品化的二次开发，位于基础模型与机器人控制栈之间，把感知、规划、记忆、技能和验证组织为持续闭环。</p>
+          <a href="#architecture">了解系统架构 <span>→</span></a>
+        </div>
+      </section>
+
+      <section class="capabilities section-dark" id="capabilities">
+        <div class="section-heading reveal">
+          <div class="section-index light"><span>01</span><b>CAPABILITIES</b></div>
+          <div><p>ONE RUNTIME · MANY SKILLS</p><h2>从环境感知到任务完成</h2></div>
+        </div>
+        <div class="capability-grid">
+          <article class="capability-card reveal">
+            <div class="cap-icon eye-icon"><i></i></div><span>01 / PERCEPTION</span>
+            <h3>多模态环境感知</h3><p>融合第一视角 RGB-D、激光雷达、里程计与自然语言，建立实时、可追溯的世界状态。</p>
+            <ul><li>Aligned RGB-D</li><li>RTX LiDAR</li><li>Scene Understanding</li></ul>
+          </article>
+          <article class="capability-card reveal" data-delay="1">
+            <div class="cap-icon route-icon"><i></i><b></b></div><span>02 / REASONING</span>
+            <h3>长程任务推理</h3><p>把复杂自然语言目标拆成可执行技能，在场景变化、风险和失败后基于新观测在线重规划。</p>
+            <ul><li>Task Decomposition</li><li>Tool Calling</li><li>Online Replanning</li></ul>
+          </article>
+          <article class="capability-card reveal" data-delay="2">
+            <div class="cap-icon memory-icon"><i></i><b></b><em></em></div><span>03 / MEMORY</span>
+            <h3>持久空间记忆</h3><p>用精确位置标签与 CLIP 视觉索引保存机器人亲历的空间，让跨会话语义导航成为可能。</p>
+            <ul><li>Spatial Index</li><li>Visual Recall</li><li>Location Tags</li></ul>
+          </article>
+          <article class="capability-card reveal" data-delay="3">
+            <div class="cap-icon shield-icon"><i>✓</i></div><span>04 / VERIFICATION</span>
+            <h3>安全执行与验证</h3><p>执行结果与任务成功严格分离。到达、停止与视觉确认均由新鲜传感器证据独立验证。</p>
+            <ul><li>Fail-closed Safety</li><li>Fresh Evidence</li><li>Auditable Trace</li></ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="demos" id="demos">
+        <div class="section-heading reveal">
+          <div class="section-index"><span>02</span><b>DEMOS</b></div>
+          <div><p>FOUR END-TO-END TASKS</p><h2>从一句指令，到真实任务完成</h2></div>
+        </div>
+        <div class="demo-stage reveal">
+          <div class="demo-media">
+            <video id="demo-video" src="assets/demos/find-door.webm" aria-label="Luxi Agent OS 找到门任务演示" autoplay muted loop playsinline controls></video>
+            <div class="media-overlay"><span id="demo-camera-label">AGENT VIEW / SIMULATION</span><span class="live-pill"><i></i> REAL RUN</span></div>
+            <div class="vision-reticle"><i></i><i></i></div>
+          </div>
+          <div class="demo-copy">
+            <div class="demo-count"><span id="demo-current">01</span><i></i><b>04</b></div>
+            <div id="demo-content">
+              <p class="demo-kicker">VISUAL SEARCH · NAVIGATION · VERIFY</p>
+              <h3>找到门</h3>
+              <p>Agent 从自然语言中提取视觉目标，主动观察环境并定位门，在在线地图约束下接近目标，最后使用新鲜 RGB-D 证据验证结果。</p>
+              <div class="demo-skills"><span>目标搜索</span><span>语义导航</span><span>到达验证</span></div>
+              <div class="task-quote"><small>USER INSTRUCTION</small>“找到门”</div>
+            </div>
+            <div class="demo-tabs" role="tablist" aria-label="演示切换">
+              <button class="active" data-demo="0" role="tab"><span>01</span><b>找到门</b><em>00:53</em></button>
+              <button data-demo="1" role="tab"><span>02</span><b>跟随前面的人</b><em>00:29</em></button>
+              <button data-demo="2" role="tab"><span>03</span><b>去厨房拿水并返回</b><em>00:51</em></button>
+              <button data-demo="3" role="tab"><span>04</span><b>将客厅的水拿到厨房并返回</b><em>01:28</em></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="architecture" id="architecture">
+        <div class="section-heading reveal">
+          <div class="section-index"><span>03</span><b>ARCHITECTURE</b></div>
+          <div><p>A UNIFIED OPERATING LAYER</p><h2>一层系统，连接认知与行动</h2></div>
+        </div>
+        <p class="architecture-intro reveal">Luxi Agent OS 解耦高层智能与具体机器人控制器，以统一的世界接口连接不同仿真后端、传感器与机器人本体。</p>
+        <div class="system-canvas reveal">
+          <div class="feedback-loop" aria-hidden="true"><span>SENSOR FEEDBACK · WORLD UPDATE</span><i></i></div>
+
+          <div class="system-row goal-row">
+            <div class="layer-label"><span>01</span><b>INTENT</b></div>
+            <article class="goal-card">
+              <div class="goal-signal"><i></i><i></i><i></i></div>
+              <div><small>USER / LANGUAGE GOAL</small><h3>“将客厅的水拿到厨房并返回”</h3></div>
+              <span class="goal-type">NATURAL LANGUAGE</span>
+            </article>
+          </div>
+
+          <div class="flow-connector"><i></i><span>GOAL + CONTEXT</span></div>
+
+          <div class="system-row reason-row">
+            <div class="layer-label"><span>02</span><b>COGNITION</b></div>
+            <article class="reason-card">
+              <div class="reason-mark"><span>LLM</span><i>+</i><span>VLM</span></div>
+              <div><small>PLANNER &amp; REASONER</small><h3>理解现场，生成可执行计划</h3></div>
+              <div class="reason-steps"><span>Observe</span><i>→</i><span>Reason</span><i>→</i><span>Plan</span></div>
+            </article>
+          </div>
+
+          <div class="flow-connector"><i></i><span>PLAN / TOOL DECISION</span></div>
+
+          <div class="system-row harness-row">
+            <div class="layer-label inverse"><span>03</span><b>RUNTIME CORE</b></div>
+            <article class="harness-card">
+              <div class="harness-heading">
+                <div><small>LUXI AGENT OS</small><h3>Embodied Agent Harness</h3></div>
+                <span><i></i> RUNTIME ACTIVE</span>
+              </div>
+              <div class="harness-modules">
+                <div><span>01</span><b>Context Builder</b><small>上下文构建</small></div>
+                <div><span>02</span><b>Task Manager</b><small>任务状态管理</small></div>
+                <div><span>03</span><b>Skill Registry</b><small>能力注册与路由</small></div>
+                <div><span>04</span><b>World State</b><small>实时世界模型</small></div>
+                <div><span>05</span><b>Execution Monitor</b><small>执行证据监测</small></div>
+                <div><span>06</span><b>Recovery</b><small>失败恢复与重规划</small></div>
+                <div><span>07</span><b>Safety Guard</b><small>安全约束与急停</small></div>
+                <div><span>08</span><b>Memory</b><small>空间与任务记忆</small></div>
+              </div>
+            </article>
+          </div>
+
+          <div class="flow-connector dark"><i></i><span>VERIFIED SKILL CALL</span></div>
+
+          <div class="system-row skills-row">
+            <div class="layer-label"><span>04</span><b>SKILLS</b></div>
+            <article class="skills-card">
+              <div class="skills-title"><small>ROBOT SKILLS &amp; TOOLS</small><b>可组合的具身能力</b></div>
+              <div class="skill-list"><span>Navigation</span><span>Perception</span><span>Grasping</span><span>Manipulation</span><span>Speech</span><span>Search</span></div>
+            </article>
+          </div>
+
+          <div class="flow-connector compact"><i></i></div>
+
+          <div class="system-row foundation-row">
+            <div class="layer-label"><span>05—06</span><b>EMBODIMENT</b></div>
+            <div class="foundation-stack">
+              <article class="interface-card"><small>ROBOT INTERFACE</small><h3>ROS 2 <i>/</i> HAL <i>/</i> Robot SDK</h3><span>ROBOT-NEUTRAL BOUNDARY</span></article>
+              <article class="body-card">
+                <div><small>PHYSICAL WORLD</small><h3>Controller · Sensors · Robot Body</h3></div>
+                <div class="body-nodes"><span>G1</span><span>GO2</span><span>SIM</span></div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="architecture-caption reveal"><span>FIG. 01</span><p>从语言目标到物理行动，再由真实传感器证据更新世界状态</p><b>CLOSED-LOOP EMBODIED RUNTIME</b></div>
+      </section>
+
+      <section class="proof section-dark">
+        <div class="proof-copy reveal">
+          <div class="section-index light"><span>04</span><b>SAFETY BY DESIGN</b></div>
+          <p class="eyebrow-orange">VERIFICATION IS NOT AN AFTERTHOUGHT</p>
+          <h2>每一步可追踪，<br />每个结果<strong>可验证。</strong></h2>
+          <p>Luxi 将工具调用成功、规划器到达、机器人停稳和任务完成拆为独立状态。超时、风险、传感器中断都以不完整结果安全退出。</p>
+        </div>
+        <div class="proof-console reveal" data-delay="1">
+          <div class="proof-head"><span>TERMINAL EVIDENCE</span><b>task_08f2</b></div>
+          <div class="proof-row"><span>planner_goal_reached</span><b>true</b><i>✓</i></div>
+          <div class="proof-row"><span>stop_command_completed</span><b>true</b><i>✓</i></div>
+          <div class="proof-row"><span>stationary_confirmed</span><b>0.018 m/s</b><i>✓</i></div>
+          <div class="proof-row"><span>verification_frame</span><b>fresh · +312 ms</b><i>✓</i></div>
+          <div class="proof-result"><span>TASK STATUS</span><strong>ARRIVED_VERIFIED</strong><i>COMPLETED</i></div>
+        </div>
+      </section>
+
+      <section class="platforms">
+        <div class="platform-intro reveal"><span>05 / PLATFORMS</span><h2>从仿真到现实，<br />共享同一个运行时。</h2></div>
+        <div class="platform-list">
+          <article class="reveal"><span>SIMULATION</span><h3>MuJoCo</h3><p>可复现的移动、导航与任务评测环境</p><b>01</b></article>
+          <article class="reveal" data-delay="1"><span>SIMULATION</span><h3>Isaac Sim 5.1</h3><p>高保真 RGB-D、RTX LiDAR 与动态场景</p><b>02</b></article>
+          <article class="reveal" data-delay="2"><span>HUMANOID</span><h3>Unitree G1</h3><p>学习步态、安全导航与具身任务执行</p><b>03</b></article>
+          <article class="reveal" data-delay="3"><span>QUADRUPED</span><h3>Unitree Go2</h3><p>纯视觉导航与真实场景快速部署</p><b>04</b></article>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="footer-brand"><img class="footer-logo" src="assets/luxitech-official-logo.png" alt="陆兮科技 LuxiTech" /><p>让通用智能拥有身体，<br />让机器人理解真实世界。</p></div>
+      <div class="footer-links"><div><span>EXPLORE</span><a href="#overview">概览</a><a href="#capabilities">核心能力</a><a href="#demos">系统演示</a></div><div><span>RESOURCES</span><a href="http://192.168.2.189:8787/" target="_blank" rel="noreferrer">交互操作台 ↗</a><a href="https://tedbrown4118.github.io/LuxiNav-Demo/" target="_blank" rel="noreferrer">LuxiNav ↗</a></div></div>
+      <div class="footer-bottom"><span>© 2026 陆兮科技 LUXITECH</span><span>SHENZHEN · CHINA</span><a href="#top">BACK TO TOP ↑</a></div>
+    </footer>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
